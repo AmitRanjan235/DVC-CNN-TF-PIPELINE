@@ -1,0 +1,54 @@
+[2024-02-25 19:56:38,584: INFO: stage_01_get_data]: 
+********************
+[2024-02-25 19:56:38,584: INFO: stage_01_get_data]: >>>>> stage STAGE_NAME started <<<<<
+[2024-02-25 19:56:38,586: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2024-02-25 19:56:38,587: INFO: common]: yaml file: params.yaml loaded successfully
+[2024-02-25 19:56:38,587: INFO: stage_01_get_data]: >>>>> stage STAGE_NAME completed!<<<<<
+
+[2024-02-25 19:59:43,473: INFO: stage_01_get_data]: 
+********************
+[2024-02-25 19:59:43,474: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2024-02-25 19:59:43,474: ERROR: stage_01_get_data]: get_data() missing 1 required positional argument: 'params_path'
+Traceback (most recent call last):
+  File "F:\ml_project\AIops\project2\DVC-CNN-TF-PIPELINE\src\stage_01_get_data.py", line 41, in <module>
+    get_data(config_path=parsed_args.config)
+TypeError: get_data() missing 1 required positional argument: 'params_path'
+[2024-02-25 20:00:54,744: INFO: stage_01_get_data]: 
+********************
+[2024-02-25 20:00:54,744: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2024-02-25 20:00:54,748: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2024-02-25 20:00:54,748: ERROR: stage_01_get_data]: 'sourec_download_dirs'
+Traceback (most recent call last):
+  File "F:\ml_project\AIops\project2\DVC-CNN-TF-PIPELINE\src\stage_01_get_data.py", line 41, in <module>
+    get_data(config_path=parsed_args.config)
+  File "F:\ml_project\AIops\project2\DVC-CNN-TF-PIPELINE\src\stage_01_get_data.py", line 24, in get_data
+    source_download_dirs=config["sourec_download_dirs"]
+KeyError: 'sourec_download_dirs'
+[2024-02-25 20:01:19,682: INFO: stage_01_get_data]: 
+********************
+[2024-02-25 20:01:19,682: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2024-02-25 20:01:19,684: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2024-02-25 20:01:19,717: INFO: common]: created directory at: path_to_local_data_1
+[2024-02-25 20:01:19,717: ERROR: stage_01_get_data]: [WinError 3] The system cannot find the path specified: 'path_to_data_1'
+Traceback (most recent call last):
+  File "F:\ml_project\AIops\project2\DVC-CNN-TF-PIPELINE\src\stage_01_get_data.py", line 41, in <module>
+    get_data(config_path=parsed_args.config)
+  File "F:\ml_project\AIops\project2\DVC-CNN-TF-PIPELINE\src\stage_01_get_data.py", line 28, in get_data
+    copy_files(source_download_dir,local_data_dir)
+  File "f:\ml_project\aiops\project2\dvc-cnn-tf-pipeline\src\utils\common.py", line 23, in copy_files
+    list_of_files=os.listdir(source_download_dir)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'path_to_data_1'
+[2024-02-25 20:02:51,073: INFO: stage_01_get_data]: 
+********************
+[2024-02-25 20:02:51,073: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2024-02-25 20:02:51,076: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2024-02-25 20:02:51,091: INFO: common]: created directory at: data/cat
+[2024-02-25 20:02:51,092: ERROR: stage_01_get_data]: [WinError 3] The system cannot find the path specified: '../otuside_data/cat'
+Traceback (most recent call last):
+  File "F:\ml_project\AIops\project2\DVC-CNN-TF-PIPELINE\src\stage_01_get_data.py", line 41, in <module>
+    get_data(config_path=parsed_args.config)
+  File "F:\ml_project\AIops\project2\DVC-CNN-TF-PIPELINE\src\stage_01_get_data.py", line 28, in get_data
+    copy_files(source_download_dir,local_data_dir)
+  File "f:\ml_project\aiops\project2\dvc-cnn-tf-pipeline\src\utils\common.py", line 23, in copy_files
+    list_of_files=os.listdir(source_download_dir)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: '../otuside_data/cat'
